@@ -1,0 +1,23 @@
+while True: #оба цикла перебираются пока не выйдет правильное значение
+  try:
+    a = int(input("Число 1: "))
+    break
+  except ValueError:
+    print("Неправильное значение")  
+
+while True:
+  try:
+    b = int(input("Число 2: "))
+    break
+  except ValueError:
+    print("Неправильное значение")  
+
+summ = a * b #сумма чисел
+
+if summ > 0: # выявляет положительное ли
+  summ *= 1.5
+elif summ < 0:
+  summ *= 8
+# если было равно 0 то действия не выполняются
+
+print(f"Сумма: {summ}")
