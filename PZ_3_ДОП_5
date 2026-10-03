@@ -1,0 +1,21 @@
+while True: #работает пока не введут правильное значение
+  try:
+    a = int(input("Число 1: "))
+    break
+  except ValueError:
+    print("Неправильное значение")  
+
+while True: #второй цикл чтобы лишний раз не вводить первое значение
+  try:
+    b = int(input("Число 2: "))
+    break
+  except ValueError:
+    print("Неправильное значение")  
+
+summ = a + b
+if summ % 5: #если кратное 5 то вывел бы 0, а тут это работает случаи 1,2,3,4 
+  summ -= 2
+else: #тут кратным пяти плюсуется 1
+  summ +=1
+
+print(summ)
