@@ -1,0 +1,13 @@
+while True:#перебирают до правильного значения
+  try: 
+    number = int(input())
+    break
+  except ValueError:
+    print("Неправильное значение")  
+
+if number % 2:# если 1 то труе и значит нечетное число
+  number *= 5
+else: # в ином случаи четное
+  number *= 4
+
+print(f"Сумма: {number}")
