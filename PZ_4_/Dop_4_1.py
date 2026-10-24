@@ -1,16 +1,13 @@
-a, b, c, d = int(input()), int(input()), int(input()), int(input())
+n = 4
+i = 1
 negativ = 0
-if a < 0:
-    negativ += 1
-
-if b < 0:
-    negativ += 1
-
-if c < 0:
-    negativ += 1
-
-if d < 0:
-    negativ += 1
+summ = 0
+while i <= n:
+    number = int(input())
+    summ += number
+    if number < 0:
+        negativ += 1
+    i += 1
 
 print(f"колличество отрицательных: {negativ}")
-print(f"Сумма: {a + b + c + d}")
+print(f"Сумма: {summ}")

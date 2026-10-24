@@ -1,12 +1,15 @@
 n = int(input())
 i = 1
+summ = 0
 
-print("S=", end="")
 while i <= n:
-    if i == 1:
-        print(f"{i}!", end="")
-        i += 1
-        continue
-
-    print(f"+{i}!", end="")
+    temp_summ = 1
+    temp_i = 1
+    while temp_i <= i:
+        temp_summ *= temp_i
+        temp_i += 1
+    print(f"факториал {i} = {temp_summ}")
+    summ += temp_summ
     i += 1
+
+print("сумма: ", summ)
