@@ -7,8 +7,14 @@ def cifer(number): #функция считает и выводит сумму �
     summ += number % 10
     number //= 10
   return summ
- 
-number = int(input("Введите число:"))
+
+while True:
+  try:
+    number = int(input("Введите число:"))
+    break
+  except ValueError:
+    print("вы ввели неправильное значение")
+
 i = 0 #это считает количество итераций
 while number > 0: #работает пока число не стало 0
   number -= cifer(number) # дает функции значение числа и сразу выводит его
