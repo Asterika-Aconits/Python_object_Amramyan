@@ -1,0 +1,9 @@
+def SandP(a, b):
+  s = a * b
+  p = a * 2 + b * 2
+  return s, p
+
+a = int(input())
+b = int(input())
+s, p = SandP(a, b)
+print(f"площадь равна {s}, периметр равен {p}")
