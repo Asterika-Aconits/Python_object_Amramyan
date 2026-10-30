@@ -1,0 +1,9 @@
+def cifer_coll(number):
+  coll = 0 
+  while number > 0:
+    coll += 1
+    number //= 10
+  return coll
+
+number = int(input())
+print(cifer_coll(number))
