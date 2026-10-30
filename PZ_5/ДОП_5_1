@@ -1,0 +1,22 @@
+def cifer_sum(number):
+  summ = 0
+  while number > 0:
+    summ += number % 10
+    number //= 10
+  return summ
+
+a = int(input("Введите а: "))
+b = int(input("Введите b: "))
+c = int(input("Введите c: "))
+if cifer_sum(a) > cifer_sum(b) and cifer_sum(a) > cifer_sum(c):
+  print("цифры а больше чем у б и с")
+
+elif cifer_sum(b) > cifer_sum(a) and cifer_sum(b) > cifer_sum(c):
+  print("цифры b больше чем у a и с")
+
+elif cifer_sum(c) > cifer_sum(b) and cifer_sum(c) > cifer_sum(b):
+  print("цифры c больше чем у a и b")
+
+else:
+  print("числа равны")
+  
