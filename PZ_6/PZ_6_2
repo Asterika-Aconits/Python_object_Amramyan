@@ -29,3 +29,4 @@ print("индексы чисел: ")
 for i in range(len(elements)): #цикл вывода элементов
   print(elements[i])
   
+print("количество элементов:", len(elements))
