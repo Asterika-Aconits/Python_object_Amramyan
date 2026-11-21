@@ -1,0 +1,59 @@
+#Дана строка, содержащая латинские буквы и скобки трех видов: "()", "[]", "{}".
+#Если скобки расставлены правильно(то есть каждой открывающей соответствует)
+#закрывающая скобка того же вида) вывести число 0. В противном случае вывести
+#или номер позиции, в которой расположена первая ошибочная скобка, или, если
+#скобок не хватает, число -1
+
+stro = 'eee (((deffr ggggg ))) [ fdffdfd  fdfdfdf]'
+bloci = []
+trust = []
+boo = False
+
+for i in range(len(stro)):
+  if stro[i] == '(' and i not in bloci:
+    for n in range(i, len(stro)):
+      if stro[n] == ')' and n not in bloci:
+        boo = True
+        bloci.append(i)
+        bloci.append(n)
+        break
+    
+    if not boo:
+      print("-1, ", i)
+      break
+      
+    boo = False
+  
+  if stro[i] == '[' and i not in bloci:
+    for n in range(i, len(stro)):
+      if stro[n] == ']' and n not in bloci:
+        boo = True
+        bloci.append(i)
+        bloci.append(n)
+        break
+    
+    if not boo:
+      print("-1, ", i)
+      break
+      
+    boo = False
+      
+  if stro[i] == '{' and i not in bloci:
+    for n in range(i, len(stro)):
+      if stro[n] == '}' and n not in bloci:
+        boo = True
+        bloci.append(i)
+        bloci.append(n)
+        break
+    
+    if not boo:
+      print("-1, ", i)
+      break
+      
+    boo = False
+
+if not boo:
+  print("0")
+
+for i in range(len(stro)):
+  print(i, ": ", stro[i])
